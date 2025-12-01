@@ -1,0 +1,90 @@
+[
+  {
+    "model": "courses.review",
+    "pk": 1,
+    "fields": {
+      "course": 1,
+      "student_name": "学生甲",
+      "rating": 5,
+      "comment": "讲解通俗易懂，例子多",
+      "created_at": "2025-01-01T10:00:00"
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 2,
+    "fields": {
+      "course": 1,
+      "student_name": "学生乙",
+      "rating": 4,
+      "comment": "适合零基础",
+      "created_at": "2025-01-02T10:00:00"
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 3,
+    "fields": {
+      "course": 2,
+      "student_name": "学生丙",
+      "rating": 5,
+      "comment": "MVC 思路清晰，代码规范",
+      "created_at": "2025-01-03T10:00:00"
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 4,
+    "fields": {
+      "course": 2,
+      "student_name": "学生丁",
+      "rating": 4,
+      "comment": "案例贴近实战",
+      "created_at": "2025-01-04T10:00:00"
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 5,
+    "fields": {
+      "course": 3,
+      "student_name": "学生戊",
+      "rating": 4,
+      "comment": "对初学者友好",
+      "created_at": "2025-01-05T10:00:00"
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 6,
+    "fields": {
+      "course": 4,
+      "student_name": "学生己",
+      "rating": 5,
+      "comment": "数据可视化部分很实用",
+      "created_at": "2025-01-06T10:00:00"
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 7,
+    "fields": {
+      "course": 5,
+      "student_name": "学生庚",
+      "rating": 5,
+      "comment": "数据库范式讲得很细",
+      "created_at": "2025-01-07T10:00:00"
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 8,
+    "fields": {
+      "course": 6,
+      "student_name": "学生辛",
+      "rating": 4,
+      "comment": "对常见算法有概览",
+      "created_at": "2025-01-08T10:00:00"
+    }
+  }
+]

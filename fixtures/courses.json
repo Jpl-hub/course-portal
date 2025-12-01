@@ -1,0 +1,92 @@
+[
+  {
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+      "title": "Python 基础",
+      "description": "从零学 Python，语法 + 函数 + 模块",
+      "category": "编程",
+      "level": "初级",
+      "duration_hours": 20,
+      "teacher": "Alice",
+      "price": "199.00",
+      "rating_avg": "4.60",
+      "rating_count": 120
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+      "title": "Django Web 开发",
+      "description": "搭建 MVC 风格的 Web 应用",
+      "category": "后端",
+      "level": "中级",
+      "duration_hours": 24,
+      "teacher": "Bob",
+      "price": "299.00",
+      "rating_avg": "4.70",
+      "rating_count": 85
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 3,
+    "fields": {
+      "title": "前端快速入门",
+      "description": "HTML/CSS/JS 速成",
+      "category": "前端",
+      "level": "初级",
+      "duration_hours": 16,
+      "teacher": "Carol",
+      "price": "149.00",
+      "rating_avg": "4.50",
+      "rating_count": 140
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 4,
+    "fields": {
+      "title": "数据分析入门",
+      "description": "Pandas + 可视化案例",
+      "category": "数据",
+      "level": "中级",
+      "duration_hours": 18,
+      "teacher": "David",
+      "price": "259.00",
+      "rating_avg": "4.80",
+      "rating_count": 95
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 5,
+    "fields": {
+      "title": "微服务基础",
+      "description": "服务拆分、接口设计、网关",
+      "category": "后端",
+      "level": "进阶",
+      "duration_hours": 28,
+      "teacher": "Henry",
+      "price": "399.00",
+      "rating_avg": "4.50",
+      "rating_count": 55
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 6,
+    "fields": {
+      "title": "Go 微服务进阶",
+      "description": "Go 语言实现微服务与并发模式",
+      "category": "后端",
+      "level": "进阶",
+      "duration_hours": 30,
+      "teacher": "Ivan",
+      "price": "429.00",
+      "rating_avg": "4.60",
+      "rating_count": 45
+    }
+  }
+]

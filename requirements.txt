@@ -1,0 +1,4 @@
+django>=4.2,<5.1
+mysqlclient>=2.2
+requests>=2.31
+python-dotenv>=1.0

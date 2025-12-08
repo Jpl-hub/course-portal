@@ -4,14 +4,14 @@ from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Load .env automatically (keeps credentials/config out of code)
+
 load_dotenv(BASE_DIR / ".env")
 
 SECRET_KEY = "demo-secret-key-change-in-production"
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
-# Keep only essentials to avoid generating unwanted tables.
+
 INSTALLED_APPS = [
     "courses",
 ]
@@ -35,7 +35,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "course_portal.wsgi.application"
 
-# MySQL is shown as the primary data source in this demo.
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
@@ -55,4 +55,4 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-# Logging removed for a cleaner demo output.
+

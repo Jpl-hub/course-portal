@@ -22,6 +22,7 @@ class Course(models.Model):
 
 class Review(models.Model):
     course = models.ForeignKey(Course, related_name="reviews", on_delete=models.CASCADE)
+    student_id = models.CharField(max_length=50, db_index=True)
     student_name = models.CharField(max_length=100)
     rating = models.PositiveSmallIntegerField()
     comment = models.TextField()

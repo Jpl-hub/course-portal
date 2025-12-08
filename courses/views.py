@@ -2,12 +2,12 @@ from django.http import JsonResponse, Http404
 from django.views.decorators.http import require_GET
 from django.db.models import Avg, Count
 
-from .models import Course
+from .models import Course, Review
 from .openai_client import OpenAIProxyClient
 
 
 def serialize_course(course: Course) -> dict:
-    """Manual serialization to make the data-layer transformation explicit."""
+    
     return {
         "id": course.id,
         "title": course.title,
@@ -24,6 +24,7 @@ def serialize_course(course: Course) -> dict:
 
 def serialize_review(review) -> dict:
     return {
+        "student_id": review.student_id,
         "student_name": review.student_name,
         "rating": review.rating,
         "comment": review.comment,
@@ -58,7 +59,7 @@ def stats_view(request):
         avg_price=Avg("price"),
         avg_rating=Avg("rating_avg"),
     )
-    # Convert Decimal to float for JSON friendliness.
+   
     formatted = {
         "course_count": stats["course_count"] or 0,
         "avg_price": float(stats["avg_price"] or 0),
@@ -78,7 +79,7 @@ def ai_summary(request):
             "payload": result,
         }
         return JsonResponse(response, json_dumps_params={"ensure_ascii": False})
-    except Exception as exc:  # noqa: BLE001 keep simple for demo
+    except Exception as exc:
         return JsonResponse(
             {
                 "data_source": "openai-proxy",
@@ -87,3 +88,25 @@ def ai_summary(request):
             status=502,
             json_dumps_params={"ensure_ascii": False},
         )
+
+
+@require_GET
+def reviews_by_student(request, student_id: str):
+    reviews = Review.objects.filter(student_id=student_id).select_related("course")
+    if not reviews.exists():
+        raise Http404("No reviews for this student")
+
+    items = [
+        {
+            "course_id": r.course.id,
+            "course_title": r.course.title,
+            "student_id": r.student_id,
+            "student_name": r.student_name,
+            "rating": r.rating,
+            "comment": r.comment,
+            "created_at": r.created_at.isoformat(),
+        }
+        for r in reviews
+    ]
+    response = {"data_source": "mysql", "student_id": student_id, "reviews": items}
+    return JsonResponse(response, json_dumps_params={"ensure_ascii": False})

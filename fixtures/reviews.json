@@ -4,6 +4,7 @@
     "pk": 1,
     "fields": {
       "course": 1,
+      "student_id": "S001",
       "student_name": "学生甲",
       "rating": 5,
       "comment": "讲解通俗易懂，例子多",
@@ -15,6 +16,7 @@
     "pk": 2,
     "fields": {
       "course": 1,
+      "student_id": "S002",
       "student_name": "学生乙",
       "rating": 4,
       "comment": "适合零基础",
@@ -26,6 +28,7 @@
     "pk": 3,
     "fields": {
       "course": 2,
+      "student_id": "S003",
       "student_name": "学生丙",
       "rating": 5,
       "comment": "MVC 思路清晰，代码规范",
@@ -37,6 +40,7 @@
     "pk": 4,
     "fields": {
       "course": 2,
+      "student_id": "S004",
       "student_name": "学生丁",
       "rating": 4,
       "comment": "案例贴近实战",
@@ -48,6 +52,7 @@
     "pk": 5,
     "fields": {
       "course": 3,
+      "student_id": "S005",
       "student_name": "学生戊",
       "rating": 4,
       "comment": "对初学者友好",
@@ -59,6 +64,7 @@
     "pk": 6,
     "fields": {
       "course": 4,
+      "student_id": "S006",
       "student_name": "学生己",
       "rating": 5,
       "comment": "数据可视化部分很实用",
@@ -70,6 +76,7 @@
     "pk": 7,
     "fields": {
       "course": 5,
+      "student_id": "S007",
       "student_name": "学生庚",
       "rating": 5,
       "comment": "数据库范式讲得很细",
@@ -81,6 +88,7 @@
     "pk": 8,
     "fields": {
       "course": 6,
+      "student_id": "S008",
       "student_name": "学生辛",
       "rating": 4,
       "comment": "对常见算法有概览",

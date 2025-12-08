@@ -1,6 +1,3 @@
-"""
-Thin wrapper around the OpenAI proxy API to show external data source encapsulation.
-"""
 import os
 import requests
 from requests.adapters import HTTPAdapter, Retry
@@ -10,7 +7,7 @@ class OpenAIProxyClient:
     def __init__(self):
         self.api_key = os.getenv("OPENAI_API_KEY", "demo-key")
         self.base_url = os.getenv("OPENAI_BASE_URL", "https://api.openai-proxy.org/v1")
-        # Retry to reduce偶发 SSL/网络抖动影响
+        
         retries = Retry(
             total=3,
             backoff_factor=0.5,
@@ -22,10 +19,7 @@ class OpenAIProxyClient:
         self.session.mount("https://", HTTPAdapter(max_retries=retries))
 
     def summarize_topic(self, topic: str) -> dict:
-        """
-        Returns a JSON-ready dict for the given topic.
-        This is intentionally small and explicit to show the data-layer transformation.
-        """
+        
         payload = {
             "model": "gpt-4o-mini",
             "messages": [
@@ -46,5 +40,5 @@ class OpenAIProxyClient:
         return {
             "topic": topic,
             "summary": content,
-            "provider": "openai-proxy",
+            "provider": "openai",
         }

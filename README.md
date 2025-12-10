@@ -21,3 +21,14 @@ python manage.py runserver 0.0.0.0:8000
 - `/api/stats/`：汇总统计
 - `/api/ai-summary?topic=xxx`：外部接口封装
 
+## natapp地址
+http://jiekoukeshe.natapp1.cc/api/courses/
+
+http://jiekoukeshe.natapp1.cc/api/courses/3/
+
+http://jiekoukeshe.natapp1.cc/api/students/S003/reviews/
+
+http://jiekoukeshe.natapp1.cc/api/stats/
+
+http://jiekoukeshe.natapp1.cc/api/ai-summary?topic=flask
+
